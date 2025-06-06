@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educação até o 7º Ano</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0f2d, #1a1a40);
+      color: #e0e0ff;
+    }
+
+    header {
+      background-color: #121236;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #00ffe5;
+      text-shadow: 0 0 10px #00ffe5;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1e1e3f;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: #00ffff;
+      padding: 15px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #2a2a6f;
+    }
+
+    section {
+      display: none;
+      padding: 30px;
+      animation: fadeIn 0.5s;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h2 {
+      color: #00ffe5;
+      text-shadow: 0 0 5px #00ffe5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portal de Conhecimento Escolar</h1>
+  </header>
+  <nav>
+    <button onclick="showSection('inicio')">Início</button>
+    <button onclick="showSection('fisica')">Física</button>
+    <button onclick="showSection('astronomia')">Astronomia</button>
+    <button onclick="showSection('programacao')">Programação</button>
+    <button onclick="showSection('geografia')">Geografia</button>
+    <button onclick="showSection('portugues')">Português</button>
+    <button onclick="showSection('matematica')">Matemática</button>
+    <button onclick="showSection('biologia')">Biologia</button>
+    <button onclick="showSection('historia')">História</button>
+    <button onclick="showSection('ingles')">Inglês</button>
+  </nav>
+
+  <section id="inicio" class="active">
+    <h2>Bem-vindo ao Portal Escolar</h2>
+    <p>Aqui você encontrará um resumo incrível de várias matérias até o 7º ano. Explore o conhecimento de forma moderna e interativa!</p>
+  </section>
+
+  <section id="fisica">
+    <h2>Física</h2>
+    <p>A física nos ajuda a entender o movimento, a energia, a força e como tudo ao nosso redor funciona.</p>
+  </section>
+
+  <section id="astronomia">
+    <h2>Astronomia</h2>
+    <p>Estude os planetas, estrelas, galáxias e os segredos do universo!</p>
+  </section>
+
+  <section id="programacao">
+    <h2>Programação</h2>
+    <p>Davi vai completar esta seção com conteúdos de programação em breve. Fique ligado!</p>
+  </section>
+
+  <section id="geografia">
+    <h2>Geografia</h2>
+    <p>Conheça os países, os mapas, os climas e como o mundo é dividido!</p>
+  </section>
+
+  <section id="portugues">
+    <h2>Português</h2>
+    <p>Aprenda sobre gramática, ortografia, literatura e como se comunicar bem!</p>
+  </section>
+
+  <section id="matematica">
+    <h2>Matemática</h2>
+    <p>Estude números, operações, problemas e raciocínio lógico.</p>
+  </section>
+
+  <section id="biologia">
+    <h2>Biologia</h2>
+    <p>Descubra como os seres vivos funcionam, desde as células até os ecossistemas.</p>
+  </section>
+
+  <section id="historia">
+    <h2>História</h2>
+    <p>Explore os eventos e personagens que mudaram o mundo!</p>
+  </section>
+
+  <section id="ingles">
+    <h2>Inglês</h2>
+    <p>Aprenda palavras, frases e expressões para falar a língua mais usada no mundo!</p>
+  </section>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
